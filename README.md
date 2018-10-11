@@ -1,3 +1,32 @@
+
+
+## setup:
+
+Mongodb:
+Open a new terminal
+Execute the following command:
+ path inside your mongo folder + bin/mongod --dbpath path to the data folder
+
+Example: /Users/darwin/Desktop/mongodb-osx-x86_64-4.0.2/bin/mongod --dbpath /Users/darwin/Desktop/data 
+
+
+Open a new terminal
+Go to the root folder of the app and open terminal node app.js (=> starts the spotify authentication)
+Open a new terminal
+Open the server folder in the terminal and execute node server.js
+Open a new terminal
+Open the authorization folder and execute npm start
+
+Your system should be running now! :D
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
