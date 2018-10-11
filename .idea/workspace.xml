@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a7da2b8-b6ab-4fcc-a1ba-e1379abc2a60" name="Default" comment="" />
+    <list default="true" id="6a7da2b8-b6ab-4fcc-a1ba-e1379abc2a60" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,53 +12,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/authorization/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="34" column="4" lean-forward="false" selection-start-line="34" selection-start-column="4" selection-end-line="34" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/authorization/src/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
-              <caret line="107" column="1" lean-forward="false" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="n#!!block;n#saveRequest#0;n#App#0" expanded="false" />
-                <element signature="n#!!block;n#getHashParams#0;n#App#0" expanded="false" />
-                <element signature="e#4543#4679#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="207" column="35" lean-forward="false" selection-start-line="207" selection-start-column="29" selection-end-line="207" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -83,12 +39,12 @@
       <find>mongo</find>
       <find>this is</find>
       <find>access</find>
-      <find>header</find>
       <find>throw</find>
-      <find>response</find>
       <find>fetchData</find>
       <find>latestRequests</find>
       <find>fetchHistory</find>
+      <find>header</find>
+      <find>response</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -154,6 +110,16 @@
               <item name="musicmerge_react" type="b2602c69:ProjectViewProjectNode" />
               <item name="musicmerge_react" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="musicmerge_react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicmerge_react" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="authorization" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="musicmerge_react" type="b2602c69:ProjectViewProjectNode" />
+              <item name="musicmerge_react" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="server" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -205,12 +171,12 @@
       <updated>1539011741579</updated>
       <workItem from="1539011743068" duration="3932000" />
       <workItem from="1539032365260" duration="16000" />
-      <workItem from="1539086817179" duration="28310000" />
+      <workItem from="1539086817179" duration="29152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32258000" />
+    <option name="totallyTimeSpent" value="33100000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -437,22 +403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="207" column="35" lean-forward="false" selection-start-line="207" selection-start-column="29" selection-end-line="207" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/authorization/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1787">
@@ -472,13 +422,29 @@
     <entry file="file://$PROJECT_DIR$/authorization/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
-          <caret line="107" column="1" lean-forward="false" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+          <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="n#!!block;n#saveRequest#0;n#App#0" expanded="false" />
             <element signature="n#!!block;n#getHashParams#0;n#App#0" expanded="false" />
             <element signature="e#4543#4679#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="207" column="35" lean-forward="false" selection-start-line="207" selection-start-column="29" selection-end-line="207" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
