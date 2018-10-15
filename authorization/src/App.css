@@ -14,7 +14,7 @@ body{
 /*fonts */
 @font-face {
   font-family: 'font';
-  src:url('couture-bld.otf');
+  /*src:url('couture-bld.otf');*/
 }
 
 /* App Container */
