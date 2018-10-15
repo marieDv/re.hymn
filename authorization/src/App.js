@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import  Concerts  from './Concerts.js';
 import './App.css';
+import logo from './images/Rehymn.png';
 import Spotify from 'spotify-web-api-js';
 const spotifyWebApi = new Spotify();
 var tempHistory = [];
@@ -35,6 +36,7 @@ class App extends Component {
 
 
     }
+
 
 ////////////////////////////////////////////
 //// GET complete search history  (Todo: add restrictions if needed)
@@ -179,16 +181,29 @@ _handleKeyPress = (e) => {
   render() {
     return (
       <div className="App">
-
               <a href="http://localhost:8888">
-                 <button><p className={"text-login"}>Login with Spotify</p></button>
+                 <button id='loginButton'><p className={"text-login"}>Login with Spotify</p></button>
               </a>
 
-          {!this.state.showConcerts &&
-          <div id="main">
+  <img className='App-logo' alt='Rehymn' src={logo}/>
+
+          {!this.state.showConcerts && //latest Requests
+          <div id="main" >
+          {this.state.latestRequests[0] &&
+          <div>
+          <h3>latest requests:</h3>
+          <div className="recent-container">
+            {this.state.latestRequests.map((item, i) => <li  key={i} onClick={() => this.toggleConcertPage(item.name)}className="searchPerClick">
+            <button className="items-h">{item.name}</button>
+            </li>)}
+             </div>
+           </div>
+          }
+
               {/*SEARCH for an artist or group*/}
-              <input value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} onKeyPress={this._handleKeyPress}/>
-              <button onClick={() => this.searchArtist()}>start!</button>
+              
+              <input value={this.state.inputValue} onChange={evt => this.updateInputValue(evt)} onKeyPress={this._handleKeyPress} placeholder="Search for any Artist..."/>
+              <button className="searchbutton" onClick={() => this.searchArtist()}>Search!</button>
 
 
 
@@ -196,28 +211,31 @@ _handleKeyPress = (e) => {
                   <h2>unfortunately there are no artists or groups listed under this name!</h2>
               }
               {/* MAP THE SEARCH RESULTS ON TOP OF THE LIST*/}
+
+        <div className="fav-items">
               {this.state.showSearchResults &&
-              this.state.foundArtistsLi.map((item, i) => <li key={i} onClick={() => this.toggleConcertPage(item.name)}className="searchPerClick"><img
+              this.state.foundArtistsLi.map((item, i) => <li key={i} onClick={() => this.toggleConcertPage(item.name)}className="searchPerClick"><img className="search-photo"
                   alt={item.name} src={item.images[2] ? item.images[2].url : ""}/>
-                  <button>{item.name}</button>
+                  <button className="search-photo-item">{item.name}</button>
               </li>)
               }
-              {this.state.latestRequests[0] &&
-              <div>
-              <h3>latest requests:</h3>
-                {this.state.latestRequests.map((item, i) => <li key={i} onClick={() => this.toggleConcertPage(item.name)}className="searchPerClick">
-                <button>{item.name}</button>
-                </li>)}
-               </div>
-              }
+        </div>
+
+
+
               <br/>
               <h3>favorite artists:</h3>
-              {this.state.favArtistsLi.map((item, i) => <li key={i} onClick={() => this.toggleConcertPage(item.name)}className="searchPerClick"><img
+          <div className="fav-container">
+                 <figure className="fav-items">
+              {this.state.favArtistsLi.map((item, i) => <li key={i} onClick={() => this.toggleConcertPage(item.name)}className="searchPerClick"><img className="photo"
                   alt={item.name} src={item.images[2] ? item.images[2].url : ""}/>
-                  <button>{item.name}</button>
+                  <figcaption className="fav-button" >{item.name}</figcaption>
               </li>)}
+                </figure>
+        </div>
           </div>
-          }
+        }
+
           {this.state.showConcerts &&
           <Concerts artist={this.state.artistForUpcoming}></Concerts>
           }
