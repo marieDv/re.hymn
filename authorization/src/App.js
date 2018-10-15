@@ -29,10 +29,11 @@ class App extends Component {
          showSearchResults: false,
          showConcerts: false,
          artistForUpcoming: "",
-         latestRequests:  []
+         latestRequests:  [],
+         prevent: false,
 
         }
-
+        this.searchArtist = this.searchArtist.bind(this);
 
     }
 
@@ -87,7 +88,7 @@ componentDidUpdate(){
     if(this.state.favArtists[0].length > 0 && this.state.initialLoading){
         this.printFavArtists();
     }
-    if(this.state.searchrequest){
+    if(!this.state.prevent && this.state.searchrequest){
     if(this.state.foundArtists[0].length > 0 &&this.state.executingOnce) {
         this.printSearchedArtists();
     }
@@ -137,24 +138,28 @@ getFavArtists(){
 
 
 searchArtist(){
+    let preventEvent = false;
     spotifyWebApi.searchArtists(this.state.inputValue)
         .then((response) => {
             this.setState(prevState => ({
                 foundArtists: [response.artists.items],
             }));
+            // prevent = false;
         }, function(err) {
-            this.setState({error: true});
+            err ? preventEvent = true :preventEvent = false;
         });
 
     setTimeout(() => {
-        this.setState({searchrequest: true, executingOnce:true});
-        if(this.state.foundArtists[0].length <=1){ this.setState({error: true});}
+        if(!preventEvent){this.setState({searchrequest: true, executingOnce:true});
+        if(this.state.foundArtists[0].length <=1){ this.setState({error: true});}}
     }, 100);
     setTimeout(() => {
         this.saveRequest();
     }, 200);
 }
-
+goBack(){
+    this.setState({showConcerts: false})
+}
 ////////////////////////////////////////////////////////////////////////
 //get hash for access (see app.js in main root)
 getHashParams() {
@@ -219,7 +224,10 @@ _handleKeyPress = (e) => {
           </div>
           }
           {this.state.showConcerts &&
+          <div>
+          <a onClick={()=>this.goBack()}>back</a>
           <Concerts artist={this.state.artistForUpcoming}></Concerts>
+          </div>
           }
 
       </div>
