@@ -242,7 +242,7 @@ _handleKeyPress = (e) => {
 
           {this.state.showConcerts &&
             <div>
-            <a onClick={()=> this.goBack()}>back</a>
+            <a className="back-button" onClick={()=> this.goBack()}>back</a>
           <Concerts artist={this.state.artistForUpcoming}></Concerts>
           </div>
           }
