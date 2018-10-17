@@ -14,7 +14,7 @@ body{
 /*fonts */
 @font-face {
   font-family: 'font';
-  /*src:url('couture-bld.otf');*/
+  src:url('couture-bld.otf');
 }
 
 /* App Container */
@@ -68,25 +68,29 @@ list-style-type: none;
 
 
 /* Search Bar */
-input{
-margin-top: 30px;
-margin-bottom: 30px;
-
-width: 520px;
-height: 25px;
-text-align:center;
-}
-
-.searchbutton{
-  height:25px;
-  width:125px;
+.bar-search{
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-align:center;
 }
-.searchbutton:hover{
+
+input{
+  width: 620px;
+}
+
+.searchbutton:hover{ /*Change color of search button when it detects hover*/
 background-color: #e53aa2;
-border: #e53aa2 ;
+border: #e53aa2 2px solid ;
 color:#ffffff;
 }
+
+@media screen and (max-width:700px){ /*Making Search bar responsive*/
+   input{
+    width: 320px;
+    text-align: center;
+  }
+}
+
 /* Search Bar End*/
 
 /* FAVOURITE ARTISTS */
@@ -95,18 +99,38 @@ color:#ffffff;
  flex-direction: row;
  justify-content: space-between;
  list-style-type: none;
-}
-.fav-items{
-  /* To correctly align image, regardless of content height: */
-   vertical-align: top;
-   display: inline-block;
-   /* To horizontally center images and caption */
-   text-align: center;
-   /* The width of the container also implies margin around the images. */
-   width: 120px;
-   list-style-type: none;
 
 }
+
+
+.fav-items{
+  /* To correctly align image, regardless of content height: */
+   /* vertical-align: top;
+   display: inline-block; */
+   /* To horizontally center images and caption */
+   /* text-align: center; */
+   /* The width of the container also implies margin around the images. */
+   /* width: 120px; */
+
+   list-style-type: none;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: space-between;
+
+}
+
+.fav-items-now{
+   list-style-type: none;
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: space-between;
+   max-width: 950px;
+   margin: auto;
+}
+
+
 .photo{
   border-radius: 50%;
   margin-top: 20px;
