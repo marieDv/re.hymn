@@ -24,7 +24,6 @@ class Concerts extends Component {
         for(let i=0; i<all.length; i++){
             for(let j=0; j<all.length; j++){
                 if(all[i].innerHTML === all[j].innerHTML && !(j === i)){
-                   // console.log(all[i].innerHTML);
                     all[j].style.color = "#a2a2a2";
                 }
             }
@@ -92,7 +91,7 @@ class Concerts extends Component {
         if(this.state.artistId){
         let temp = this.state.artistId;
         fetch('https://api.songkick.com/api/3.0/artists/'+temp+'/calendar.json?apikey=4qVB9zk3XpWOwz8C')
-            .then(res => res.json())//response type
+            .then(res => res.json())
             .then((data) => {
                 this.setState({upcomingConcerts: data.resultsPage.results.event})
             })
@@ -107,7 +106,7 @@ class Concerts extends Component {
     getArtistId(){
         let artist = this.props.artist;
         fetch('https://api.songkick.com/api/3.0/search/artists.json?apikey=4qVB9zk3XpWOwz8C&query='+artist)
-            .then(res => res.json())//response type
+            .then(res => res.json())
             .then((data) => {
                 this.setState({artistId: data.resultsPage.results.artist[0].id})
             })
